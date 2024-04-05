@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #27282c;
+  }
+
+  div{
+    position: relative;
+    background-color: white;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+  }
+
+  div:hover{
+    letter-spacing: 0.25rem;
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+
+  }
+
+  div::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background:  #27282c;
+  }
+
+  div span{
+    position: relative;
+    z-index: 1;
+  }
+
+  div i{
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  div i::before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+  }
+
+  div:hover i::before{
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 40px 39px var(--clr);
+  }
+
+  div i::after{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+  }
+
+  div:hover i::after{
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+    box-shadow: 38px -39px var(--clr);
+  }
+
+ h1{
+    color: white;
+    text-align: center;
+ }
+ header{
+    /* position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; */
+    height: 500px;
+    width: 500px;
+ }
+
+  
+  /* button {
+    position: relative;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  button:hover {
+    background-image: linear-gradient(blue, black);
+  /* } */
+  #time {
+    font-size: 18px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+  } 
